@@ -1,0 +1,198 @@
+*{
+  --primary-color: #008CBA;
+  --secondary-color: #ffffff;
+  --gray-color: #A9A9A9;
+  --black-color: #000;
+}
+
+.container{
+  margin: 6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8rem;
+  margin-bottom: 2rem;
+  
+}
+
+.title{
+  margin: 0;
+}
+
+.button-items{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  margin: 0;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+}
+
+.primary{
+  border: none;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.card{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-area: 1rem;
+  align-items: flex-start;
+  gap: 2rem;
+  
+}
+
+.budget-container{
+  padding: 1rem 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px lightgray;
+}
+
+.budget-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8rem;
+  padding:  1rem 0;
+  align-items: baseline;
+  font-weight: normal;
+}
+
+.max{
+  color: var(--black-color);
+  opacity: 0.6;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+progress {
+  border-radius: 20%;
+  width: 100%;
+   margin-bottom: 0.5rem; 
+}
+
+progress::-webkit-progress-value { 
+  background: var(--primary-color);
+  border-radius: 20px;
+} 
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+progress::-moz-progress-bar {
+  background: var(--primary-color);
+  border-radius: 20px;
+} 
+
+
+/* progress condition part
+Filled part – style via class */
+progress.low::-webkit-progress-value {
+  background-color: var(--primary-color);
+}
+
+progress.mid::-webkit-progress-value {
+  background-color: orange;
+}
+
+progress.high::-webkit-progress-value {
+  background-color: red;
+}
+
+/* Firefox support */
+progress.low::-moz-progress-bar {
+  background-color: var(--primary-color);
+}
+
+progress.mid::-moz-progress-bar {
+  background-color: orange;
+}
+
+progress.high::-moz-progress-bar {
+  background-color: red;
+}
+
+.expense{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 1rem 0.5rem;
+  gap: 2rem;
+}
+
+.add-btn:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.view-btn{
+  background-color: var(--secondary-color);
+  border: 2px solid var(--gray-color);
+  color: var(--gray-color);
+}
+
+.view-btn:hover{
+  background-color: var(--gray-color);
+  color: var(--secondary-color);
+}
+
+.bg-danger{
+  background-color: rgba(255, 0, 0, 0.1); 
+}
+
+.bg-light{
+  background-color: #f9f9f9;
+}
+
+
+
+/* Responsive design{ */
+
+ @media screen and (max-width: 600px) {
+   .container{
+    margin: 1rem 0rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .budget-container{
+  padding: 1rem 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px lightgray;
+}
+.card{
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+}
