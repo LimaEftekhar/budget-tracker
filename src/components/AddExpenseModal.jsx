@@ -113,7 +113,7 @@ const inputStyle = {
 
 const submitButtonStyle = {
   padding: "0.5rem 1rem",
-  backgroundColor: "#007bff",
+  backgroundColor: "var(--primary-color)",
   color: "#fff",
   border: "none",
   borderRadius: "4px",

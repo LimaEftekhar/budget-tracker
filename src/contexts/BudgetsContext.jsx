@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useCallback } from "react"
 import { v4 as uuidV4 } from "uuid"
 import useLocalStorage from "../hooks/useLocalStorage"
 
@@ -14,10 +14,13 @@ export const BudgetsProvider = ({children}) =>{
     const [budgets, setBudgets] = useLocalStorage("budgets", [])
     const [expenses, setExpenses] = useLocalStorage("expenses",[])
 
-    function getBudgetExpenses (budgetId){
-        return expenses.filter(expense => expense.budgetId === budgetId)
-
-    }
+//Callback
+    const getBudgetExpenses = useCallback(
+    (budgetId) => {
+      return expenses.filter((expense) => expense.budgetId === budgetId);
+    },
+    [expenses],
+  );
     function addExpense ({description, amount, budgetId}){
         setExpenses(pervExpenses =>{
 

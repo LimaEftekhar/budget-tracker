@@ -3,6 +3,7 @@
   --secondary-color: #ffffff;
   --gray-color: #A9A9A9;
   --black-color: #000;
+  --green-color: #28a745;
 }
 
 .container{
@@ -43,6 +44,7 @@
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 .primary{

@@ -6,6 +6,7 @@ const StyledA = styled.a`
 `
 const StyledDiv = styled.div`
     margin-top: 4rem;
+    text-align: center;
 `
 
 function NotFound({title}){
